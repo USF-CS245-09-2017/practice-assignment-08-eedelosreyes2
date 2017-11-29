@@ -17,8 +17,7 @@ public class GraphAdjMatrix implements Graph {
 	public void topologicalSort() {
         int indegree[] = new int[edges.length];  
         for(int i = 0; i < edges.length; i++) {
-            int[] temp = edges[i];
-            for(int j : temp) {
+            for(int j : edges[i]) {
                 indegree[j]++;
             }
         }
